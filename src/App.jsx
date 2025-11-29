@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ComA from './components/ComA';
 import ComB from './components/Comb';
 import ComC from './components/ComC';
+import ComD from './components/ComD';
 
 const App = () => {
 
@@ -16,16 +17,19 @@ const App = () => {
   return (
     <div>
       <h1>React Hooks</h1>
-      <h3>1. useState Hook</h3>
+      {/* <h3>1. useState Hook</h3>
       <p>{value}</p>
       <button onClick={handleClick}>Click</button>
 
 
       <ComA value={value} setValue={setValue}/>
       <ComB a={a}/>
+      */}
 
-      <ComC />
-      
+      <ComC /> 
+
+      {/* <ComD /> */}
+
     </div>
   )
 }

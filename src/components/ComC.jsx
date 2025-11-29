@@ -2,12 +2,15 @@ import React, { useState } from "react";
 
 const ComC = () => {
   const [cartValue, setCartValue] = useState(0);
+  const [status, setStatus] = useState(true);
 
   const handleIncrement = () => {
+    setStatus(false);
     setCartValue((cartValue) => cartValue + 1);
   };
   const handleDecrement = () => {
-    if (cartValue > 0) {
+    setStatus(true);
+    if (cartValue > 0) {     
       setCartValue((cartValue) => cartValue - 1);
       return;
     }
@@ -17,8 +20,14 @@ const ComC = () => {
     <div>
       <h1>Cart Component</h1>
       <p>Cart value : {cartValue}</p>
-      <button onClick={handleIncrement}>+</button>
-      <button onClick={handleDecrement}>-</button>
+
+      {
+        status ? 
+        (<button onClick={handleIncrement}>Add to cart</button>)
+        :
+        (<button onClick={handleDecrement}>Remove from cart</button>)
+      }
+      
     </div>
   );
 };
