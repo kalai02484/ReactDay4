@@ -9,6 +9,7 @@ const App = () => {
   let a = 10;
 
   const [value, setValue] = useState(10);
+  const [mount, setMount] = useState(true);
 
   const handleClick = () => {
     setValue(value + 1);
@@ -26,9 +27,17 @@ const App = () => {
       <ComB a={a}/>
       */}
 
-      <ComC /> 
+      {/* <ComC />  */}
 
       {/* <ComD /> */}
+      
+      <button onClick={() => setMount(!mount)}>
+        {mount ? "Unmount ComD" : "Mount ComD"}
+      </button>
+
+      { mount && <ComD /> }
+
+      
 
     </div>
   )
