@@ -3,6 +3,7 @@ import ComA from './components/ComA';
 import ComB from './components/Comb';
 import ComC from './components/ComC';
 import ComD from './components/ComD';
+import ComE from './components/ComE';
 
 const App = () => {
 
@@ -30,12 +31,14 @@ const App = () => {
       {/* <ComC />  */}
 
       {/* <ComD /> */}
-      
-      <button onClick={() => setMount(!mount)}>
+
+      {/* <button onClick={() => setMount(!mount)}>
         {mount ? "Unmount ComD" : "Mount ComD"}
       </button>
 
-      { mount && <ComD /> }
+      { mount && <ComD /> } */}
+
+      <ComE />
 
       
 
